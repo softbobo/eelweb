@@ -5,4 +5,5 @@ This is being developed in Python 3.7.2, but should work from Python 3.3 on (no 
 Next steps:
 - add license 
 - set up navigation between sub-urls
+- set up logging
 
