@@ -37,7 +37,6 @@ This sets up a very basic server, which allows you to access the app in your bro
 
 ## TODO
 
-- add license 
 - set up navigation between sub-urls
 - set up logging
 
