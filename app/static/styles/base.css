@@ -1,6 +1,71 @@
 /* basic style sheet for all sub-pages */
 
+/* need to adjust:
+- margin + padding
+- change colors to clear hexadecimal values
+*/
 body {
     background-color: black;
-    color: greenyellow;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
+
+
+.dotnav ul {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    cursor: default;
+}
+
+.dotnav li {
+	position: relative;
+	display: block;
+	float: center;
+	margin: 0 16px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.dotnav li a {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border-radius: 50%;
+    background-color: white;
+    text-indent: -999em;
+    cursor: pointer;
+    position: absolute;
+}
+
+/* modifies display for big viewports (>600px):
+- lotta code from here http://css-snippets.com/simple-horizontal-navigation/#read
+- makes navbar horizontal on big screens, leaves it vertical for small ones
+*/
+@media screen and (min-width: 600px) {
+    .dotnav ul {
+        overflow: auto;
+        width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .dotnav li {
+        width: 16px;
+        border-bottom: none;
+        height: 16px;
+        line-height: 50px;
+    }
+
+    /* make navigation horizontal  */
+    .dotnav li {
+        display: inline-block;
+    }
+} 

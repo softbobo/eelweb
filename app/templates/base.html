@@ -9,7 +9,16 @@
         {% endif %}
         <link rel="stylesheet" href="{{ url_for('static', filename='styles/base.css') }}">
     </head>
-    <body>   
+    <body> 
+        <nav>
+            <div class="dotnav">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">START</a></li>
+                    <li><a href="{{ url_for('snapshots') }}">SNAPSHOTS</a></li>
+                    <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>  
         {% block content %}{% endblock %}
     </body>
 </html>
