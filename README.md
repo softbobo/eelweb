@@ -37,7 +37,7 @@ This sets up a very basic server, which allows you to access the app in your bro
 
 ## TODO
 
-- set up navigation between sub-urls
+- set up navigation between sub-urls (incl. info when hovering over)
 - set up logging
 - find font
 - set up layout for the contact sub-page 
