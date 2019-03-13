@@ -1,22 +1,33 @@
 /* basic style sheet for all sub-pages */
 
 /* need to adjust:
-- margin + padding
-- change colors to clear hexadecimal values
+    - margin + padding
+    - change colors to clear hexadecimal values
 */
+
+/* somehow doesn't get inherited, when i put this in the body classifier */
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
     color: white;
     margin: 0;
     padding: 0;
     text-align: center;
+    box-sizing: border-box; /* this is new CSS3 - test w older browsers */
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
-
 
 .dotnav ul {
     position: relative;
     margin: 0 auto;
-    padding: 0;
+    padding-top: 1.5%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0.5%;
     list-style: none;
     text-align: center;
     cursor: default;
@@ -29,7 +40,8 @@ body {
 	margin: 0 16px;
 	width: 16px;
 	height: 16px;
-	cursor: pointer;
+    cursor: pointer;
+    display: inline-block; /* make navigation horizontal  */
 }
 
 .dotnav li a {
@@ -37,7 +49,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    outline: none;
     border-radius: 50%;
     background-color: white;
     text-indent: -999em;
@@ -49,7 +60,8 @@ body {
 - lotta code from here http://css-snippets.com/simple-horizontal-navigation/#read
 - makes navbar horizontal on big screens, leaves it vertical for small ones
 */
-@media screen and (min-width: 600px) {
+
+/*@media screen and (min-width: 600px) {
     .dotnav ul {
         overflow: auto;
         width: 600px;
@@ -63,9 +75,40 @@ body {
         height: 16px;
         line-height: 50px;
     }
+} */
 
-    /* make navigation horizontal  */
-    .dotnav li {
-        display: inline-block;
-    }
-} 
+.container {
+    font-family: 'Courier New', Courier, monospace; /* placeholder */
+}
+
+/* colors in these following containers are just for better visibility while positioning */
+
+.container #ee_desc {
+    display: block;
+    background-color: cadetblue;
+    width: 100%;
+    height: 20%;
+}
+
+.container #pm_desc {
+    display: inline-block;
+    background-color: crimson;
+    width: 50%;
+    height: 55%;
+    float: left;
+}
+
+.container #rs_desc {
+    display: inline-block;
+    background-color: coral;
+    width: 50%;
+    height: 55%;
+    float: right;
+}
+
+.container #ln_desc {
+    display: block;
+    background-color: cornflowerblue;
+    width: 100%;
+    height: 20%;
+}
