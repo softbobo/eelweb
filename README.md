@@ -41,3 +41,4 @@ This sets up a very basic server, which allows you to access the app in your bro
 - set up logging
 - find font
 - set up layout for the contact sub-page 
+- set up error pages for 400 and 500
