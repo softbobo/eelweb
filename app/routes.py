@@ -1,7 +1,7 @@
 #connects sub-urls to their destinies
 
 from app import app
-from flask import render_template
+from flask import render_template, send_from_directory, request
 
 @app.route('/')
 @app.route('/index')
@@ -15,3 +15,9 @@ def snapshots():
 @app.route('/contact')
 def contact():
     return render_template('contact.html', title='Contact')
+    
+#@app.route('/pm.txt')
+#@app.route('/el.txt')
+#@app.route('/rs.txt')
+#def static_from_root():
+#    return send_from_directory(app.static_folder, request.path[1:])

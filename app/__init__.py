@@ -1,6 +1,6 @@
 # initialization module, knows all the application instances
 
-from flask import Flask, request, send_from_directory
+from flask import Flask
 
 app = Flask(__name__, static_folder='static', static_url_path='')
 

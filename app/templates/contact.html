@@ -15,9 +15,16 @@
     
     <div class="container">
         CONTACT
-        <div id="ee_desc">ee_desc </div>
-        <div id="pm_desc">pm_desc</div>
-        <div id="rs_desc">rs_desc</div>
+        <div id="ee_desc">
+            {% include '_el_desc.html' %}
+        </div>
+        <div id="pm_desc">
+            {% include '_pm_desc.html' %}
+        </div>
+        <div id="rs_desc">
+            {% include '_rs_desc.html' %}
+        </div>
         <div id="ln_desc">ln_desc</div>
     </div>
+    
 {% endblock %}
