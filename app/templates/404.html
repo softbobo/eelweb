@@ -1,0 +1,8 @@
+<!-- error template for page not found -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Sorry, cannot find this page!</h1>
+    <a href="{{ url_for('index') }}">go back</a>
+{% endblock %}

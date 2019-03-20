@@ -1,0 +1,8 @@
+<!-- error template for server error -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Zappalot! This is the dev's fault. He will face the consequences. Sorry!</h1>
+    <a href="{{ url_for('index') }}">go back</a>
+{% endblock %}

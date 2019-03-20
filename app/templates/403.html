@@ -1,0 +1,8 @@
+<!-- error template for forbidden access -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>You cannot enter this part of ze interwebs!</h1>
+    <a href="{{ url_for('index') }}">go back</a>
+{% endblock %}

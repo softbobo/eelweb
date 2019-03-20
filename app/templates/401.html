@@ -1,0 +1,8 @@
+<!-- error template for unauthorized access -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>You need to authenticate first!</h1>
+    <a href="{{ url_for('index') }}">go back</a>
+{% endblock %}
