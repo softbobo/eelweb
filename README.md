@@ -41,3 +41,6 @@ This sets up a very basic server, which allows you to access the app in your bro
 - set up logging
 - find font
 - set up layout for the contact sub-page 4
+- make all package imports relative (see http://exploreflask.com/en/latest/conventions.html)
+- set up image import on page 2
+- make image size dynamically adapt to screen size/connection speed
