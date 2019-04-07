@@ -16,8 +16,5 @@ def snapshots():
 def contact():
     return render_template('contact.html', title='Contact')
     
-#@app.route('/pm.txt')
-#@app.route('/el.txt')
-#@app.route('/rs.txt')
 #def static_from_root():
 #    return send_from_directory(app.static_folder, request.path[1:])
