@@ -1,7 +1,29 @@
 {% extends 'base.html' %}
 
+<!-- to do:
+    - create template for every picture, needs:
+        - fallback option if device is not recognized
+        - low-res (square?) option for phones -> small viewports, perhaps slow connection
+        - high-res, fullsize option for laptops, computers and stuff
+    - create proper meta-tag for viewport in <head> (base.html)
+    - research if <picture> or <img> is the better match for use-case (maybe both, with <img> being fallback)
+-->
+
 {% block content %}
+<div id="snap">
     <a href="http://ethbo.bandcamp.com/album/eel-hdd-ep">
-        <img src="{{ url_for('static', filename='images/hdd_sticker_72ppi_web.jpg')}}" alt="EEL - HDD">
+        <picture>
+            <!-- Image for small screens-->
+            <img src="{{ url_for('static', filename='images/hdd_sticker_small.jpg')}}" 
+                srcset=""
+                alt="EEL HDD cover sticker">
+            <!-- Image for big screens-->
+            <img src="{{ url_for('static', filename='images/hdd_sticker_big.jpg')}}" 
+                srcset=""
+                alt="EEL HDD cover sticker">
+        </picture>
     </a>
+</div>
+        
+
 {% endblock %}
