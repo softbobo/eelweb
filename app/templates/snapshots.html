@@ -10,16 +10,16 @@
 -->
 
 {% block content %}
-<div id="snap">
+<div class="snap">
     <a href="http://ethbo.bandcamp.com/album/eel-hdd-ep">
         <picture>
-            <!-- Image for small screens-->
-            <img src="{{ url_for('static', filename='images/hdd_sticker_small.jpg')}}" 
-                srcset=""
-                alt="EEL HDD cover sticker">
             <!-- Image for big screens-->
-            <img src="{{ url_for('static', filename='images/hdd_sticker_big.jpg')}}" 
-                srcset=""
+            <img src="{{ url_for('static', filename='images/hdd_sticker_sq_375_300px.jpg')}}" sizes="95vw"
+                srcset="{{ url_for('static', filename='images/hdd_sticker_full_800_300px.jpg' )}} 800w,
+                        {{ url_for('static', filename='images/hdd_sticker_full_1200_300px.jpg' )}} 1200w,
+                        {{ url_for('static', filename='images/hdd_sticker_full_1600_300px.jpg' )}} 1600w,
+                        {{ url_for('static', filename='images/hdd_sticker_full_2000_300px.jpg' )}} 2000w,
+                        {{ url_for('static', filename='images/hdd_sticker_full_3000_300px.jpg' )}} 3000w"
                 alt="EEL HDD cover sticker">
         </picture>
     </a>
